@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>hh</title>
+    <title>Soccer Game</title>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -188,7 +188,7 @@
   <div class="card text-white bg-danger mb-3" style="max-width: 23rem;">
     <div class="card-header">Game Record</div>
     <div class="card-body">
-        <button type="button" class="btn btn-primary">Clear</button>
+        <button type="button" class="btn btn-primary" onclick="cle()">Clear</button>
       <p class="card-text" id="game_record"></p>
     </div>
   </div>
@@ -202,6 +202,9 @@
                 </p>
             </figure>
   <script>
+    function cle(){
+      document.getElementById("game_record").innerHTML="";
+    }
     var active_graph;
     var innn=0;
     var wer=[];
