@@ -1,0 +1,415 @@
+<html>
+  <head>
+    <title>hh</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  </head>
+  <body onload="add()">
+
+<div class="row">
+
+<div class="card col-xs-3" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Group 1</h5>
+      <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Country</th>
+                <th>Point</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td >1</td>
+                <td><button id="name0" onclick="add_coun(0)">Netherland</button></td>
+                <td id="point0"></td>
+            </tr>
+            <tr>
+                <td >2</td>
+                <td><button id="name1" onclick="add_coun(1)">Senegal</button></td>
+                <td id="point1"></td>
+            </tr>
+            <tr>
+                <td >3</td>
+                <td><button id="name2" onclick="add_coun(2)">Equador</button></td>
+                <td id="point2"></td>
+            </tr>
+            <tr>
+                <td >4</td>
+                <td><button id="name3" onclick="add_coun(3)">Qatar</button></td>
+                <td id="point3"></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="#" class="btn btn-primary" onclick="p(0)">Show Graph</a>
+    </div>
+  </div>
+
+  <div class="card col-xs-3" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Group 2</h5>
+      <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Country</th>
+                <th>Point</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td >1</td>
+                <td><button id="name4" onclick="add_coun(4)">England</button></td>
+                <td id="point4"></td>
+            </tr>
+            <tr>
+                <td >2</td>
+                <td><button id="name5" onclick="add_coun(5)">USA</button></td>
+                <td id="point5"></td>
+            </tr>
+            <tr>
+                <td >3</td>
+                <td><button id="name6" onclick="add_coun(6)">Irani</button></td>
+                <td id="point6"></td>
+            </tr>
+            <tr>
+                <td >4</td>
+                <td><button id="name7" onclick="add_coun(7)">Wales</button></td>
+                <td id="point7"></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="#" class="btn btn-primary" onclick="p(4)">Show Graph</a>
+    </div>
+  </div>
+
+  <div class="card col-xs-3" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Group 3</h5>
+      <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Country</th>
+                <th>Point</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td >1</td>
+                <td><button id="name8" onclick="add_coun(8)">Argentina</button></td>
+                <td id="point8"></td>
+            </tr>
+            <tr>
+                <td >2</td>
+                <td><button id="name9" onclick="add_coun(9)">Poland</button></td>
+                <td id="point9"></td>
+            </tr>
+            <tr>
+                <td >3</td>
+                <td><button id="name10" onclick="add_coun(10)">Mexico</button></td>
+                <td id="point10"></td>
+            </tr>
+            <tr>
+                <td >4</td>
+                <td><button id="name11" onclick="add_coun(11)">Saudi Arabia</button></td>
+                <td id="point11"></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="#" class="btn btn-primary" onclick="p(8)">Show Graph</a>
+    </div>
+  </div>
+
+  <div class="card col-xs-3" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Group 4</h5>
+      <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Country</th>
+                <th>Point</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td >1</td>
+                <td><button id="name12" onclick="add_coun(12)">France</button></td>
+                <td id="point12"></td>
+            </tr>
+            <tr>
+                <td >2</td>
+                <td><button id="name13" onclick="add_coun(13)">Australia</button></td>
+                <td id="point13"></td>
+            </tr>
+            <tr>
+                <td >3</td>
+                <td><button id="name14" onclick="add_coun(14)">Tunisia</button></td>
+                <td id="point14"></td>
+            </tr>
+            <tr>
+                <td >4</td>
+                <td><button id="name15" onclick="add_coun(15)">Denmark</button></td>
+                <td id="point15"></td>
+            </tr>
+        </tbody>
+    </table>
+      <a href="#" class="btn btn-primary" onclick="p(12)">Show Graph</a>
+    </div>
+  </div>
+</div>
+
+
+  <div class="card text-center">
+    <div class="card-header">
+      Add Match
+    </div>
+    <div class="card-body">
+      <p class="card-text"><p id="home">Home</p>  <p id="vs">vs</p><p id="away">Away</p></p>
+      <a class="btn btn-outline-primary" onclick="compp(1)" id="home_wins">Home Wins</a>
+      <a class="btn btn-outline-secondary" onclick="compp(0)">Draw</a>
+      <a class="btn btn-outline-danger" onclick="compp(2)" id="away_wins">Away Wins</a>
+      <button onclick="compp(3)" class="btn btn-secondary">Reset</button>
+    </div>
+    <div class="card-footer text-muted">
+        <p id="resu"></p>
+    </div>
+  </div>
+
+  <div class="card text-white bg-danger mb-3" style="max-width: 23rem;">
+    <div class="card-header">Game Record</div>
+    <div class="card-body">
+        <button type="button" class="btn btn-primary">Clear</button>
+      <p class="card-text" id="game_record"></p>
+    </div>
+  </div>
+
+
+
+            <figure class="highcharts-figure">
+                <div id="container"></div>
+                <p class="highcharts-description">
+                    
+                </p>
+            </figure>
+  <script>
+    var active_graph;
+    var innn=0;
+    var wer=[];
+    function add_coun(pp){
+        if(innn==0){
+        var couname="name"+pp;
+        if(document.getElementById("away").innerHTML == document.getElementById(couname).innerHTML){
+            document.getElementById("resu").innerHTML="can't choose same country";
+        }
+        else{
+        document.getElementById("home").innerHTML=document.getElementById(couname).innerHTML;
+        wer[innn]=pp;    
+        innn++;
+        document.getElementById("resu").innerHTML="";
+        document.getElementById("home_wins").innerHTML=document.getElementById(couname).innerHTML+" Wins";
+        }
+    }
+        else if(innn==1){
+            var couname="name"+pp;
+            if(document.getElementById("home").innerHTML == document.getElementById(couname).innerHTML){
+                document.getElementById("resu").innerHTML="can't choose same country";
+            }
+            else{
+            document.getElementById("away").innerHTML=document.getElementById(couname).innerHTML;
+            wer[innn]=pp;
+            innn=0;
+            document.getElementById("resu").innerHTML="";
+            document.getElementById("away_wins").innerHTML=document.getElementById(couname).innerHTML+" Wins";
+            }
+        }
+        
+    }
+function compp(res){
+    var trr=""
+    if(res==3){
+        document.getElementById("home").innerHTML="Home";
+        document.getElementById("away").innerHTML="Away";
+        document.getElementById("resu").innerHTML="";
+        document.getElementById("home_wins").innerHTML="Home Wins";
+        document.getElementById("away_wins").innerHTML="Away Wins";
+    }
+    else{
+    if(document.getElementById("home").innerHTML=="Home" || document.getElementById("away").innerHTML=="Away"){
+        document.getElementById("resu").innerHTML="Invalid";
+    }
+    else{
+    if(res==1){
+        document.getElementById("resu").innerHTML=document.getElementById("home").innerHTML+" Wins";
+        point[wer[0]]+=3;
+        var te= active_graph;
+        for(te;te<active_graph+4;te++){
+            if(te==wer[0]){
+                p(active_graph);
+            }
+        }
+        document.getElementById("game_record").innerHTML+=document.getElementById("home").innerHTML+" Vs "+document.getElementById("away").innerHTML+" = "+document.getElementById("home").innerHTML+" Wins<br>";
+    }
+    else if(res==0){
+        document.getElementById("resu").innerHTML="Draw";
+        point[wer[0]]+=1;
+        point[wer[1]]+=1;
+        var te= active_graph;
+        for(te;te<active_graph+4;te++){
+            if(te==wer[0]){
+                p(active_graph);
+            }
+        }
+        document.getElementById("game_record").innerHTML+=document.getElementById("home").innerHTML+" Vs "+document.getElementById("away").innerHTML+"= Draw <br>";
+    }
+    else if(res==2){
+        document.getElementById("resu").innerHTML=document.getElementById("away").innerHTML+" Wins";
+        point[wer[1]]+=3;
+        var te= active_graph;
+        for(te;te<active_graph+4;te++){
+            if(te==wer[0]){
+                p(active_graph);
+            }
+        }
+        document.getElementById("game_record").innerHTML+=document.getElementById("home").innerHTML+" Vs "+document.getElementById("away").innerHTML+" = "+document.getElementById("away").innerHTML+" Wins <br>";
+    }
+    
+    add();
+    console.log(wer);
+}
+}
+}
+    var data1= [
+        {
+            name: "",
+            y: 0,
+            drilldown: ""
+        },
+        {
+            name: "",
+            y: 0,
+            drilldown: ""
+        },
+        {
+            name: "",
+            y: 0,
+            drilldown: ""
+        },
+        {
+            name: "",
+            y: 0,
+            drilldown: ""
+        },
+        
+    ]
+    const point=[3,2,5,4,6,5,8,7,9,4,2,5,7,3,2,9];
+    var po="point";
+function p(ko){
+    active_graph=ko;
+    let ioo=0;
+    var pii=ko;
+    var wee="name";
+    for(pii;pii<point.length;pii++){
+        
+        if(ko+4 == pii){
+            
+            break;
+        }
+        else{
+            var wq=wee+pii;
+            data1[ioo].name=document.getElementById(wq).innerHTML;
+            console.log(document.getElementById(wq).innerHTML);
+                data1[ioo].y=point[pii];
+            ioo++;
+            console.log(wq);
+            io();
+        }
+        
+}
+    }
+    
+   
+    function add(){
+        for(let i=0;i<point.length;i++){
+            var t=po;
+            t+=i;
+            console.log(t);
+            var opp=t;
+            document.getElementById(opp).innerHTML=point[i];
+        }
+        
+    }
+
+    // Data retrieved from https://gs.statcounter.com/browser-market-share#monthly-202201-202201-bar
+
+// Create the chart
+function io(){
+    
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        align: 'left',
+        text: 'World Cup 2022'
+    },
+    subtitle: {
+        align: 'left',
+    },
+    accessibility: {
+        announceNewData: {
+            enabled: true
+        }
+    },
+    xAxis: {
+        type: 'category'
+    },
+    yAxis: {
+        title: {
+            text: 'Group Rank'
+        }
+
+    },
+    legend: {
+        enabled: false
+    },
+    plotOptions: {
+        series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:1f} Points'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f} Points</b> of total<br/>'
+    },
+
+    series: [
+        {
+            name: "Countries",
+            colorByPoint: true,
+            data: data1
+        }
+    ],
+   
+});
+}
+
+  </script>
+</body>
+
+
+</html>
